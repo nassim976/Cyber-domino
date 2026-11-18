@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    margin: 0;
+    background-color: #0d0d12;
+    color: #00f0ff;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 680px;
+    height: 100vh;
+    max-height: 420px;
+    background: #12121a;
+    border: 2px solid #00f0ff55;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 4px;
+}
+
+.logo {
+    font-weight: bold;
+    color: #ff007f;
+    text-shadow: 0 0 8px #ff007f66;
+}
+
+.status {
+    color: #f5c542;
+    background: #222233;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.dev {
+    color: #888;
+    font-size: 10px;
+}
+
+/* طاولة اللعب */
+.board-area {
+    flex: 1.1;
+    background: #09090e;
+    border: 1px dashed #333;
+    border-radius: 8px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 10px;
+}
+
+.board-placeholder {
+    color: #555;
+    font-size: 12px;
+    margin: auto;
+}
+
+.table-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    background: #161622;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+#draw-btn {
+    background: #ff007f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* يد اللاعب */
+.player-hand-section {
+    background: #161622;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+}
+
+.section-title {
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 3px;
+}
+
+.hand-tiles {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+}
+
+.domino-tile {
+    background: #1a1a2e;
+    border: 2px solid #00f0ff;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.domino-tile:active {
+    transform: scale(0.92);
+    background: #00f0ff;
+    color: #12121a;
+}
+
+/* قسم الشات والرسائل */
+.chat-section {
+    background: #09090e;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.chat-messages {
+    height: 32px;
+    overflow-y: auto;
+    background: #12121a;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.msg {
+    color: #00f0ff;
+}
+
+.msg.system {
+    color: #888;
+    font-style: italic;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 4px;
+}
+
+#chat-input {
+    flex: 1;
+    background: #1a1a2e;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 11px;
+    outline: none;
+}
+
+#chat-input:focus {
+    border-color: #00f0ff;
+}
+
+#send-btn {
+    background: #00f0ff;
+    color: #12121a;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
